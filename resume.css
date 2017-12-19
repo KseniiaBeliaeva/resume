@@ -1,0 +1,12 @@
+.about__photo {
+    width: 50%;
+    float: left;
+}
+.about__intro {
+    width: 50%;
+        float: left;
+}
+
+.coverLetter__wrap {
+    clear: both;
+}
