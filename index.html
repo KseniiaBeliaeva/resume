@@ -22,13 +22,13 @@
             <p class="my-name">Kseniia Beliaeva, Junior Front End Developer</p>
         </div>
             <nav class="top-menu__nav">
-                    <a href="#" class="top-menu__item">About</a>
-                    <a href="#" class="top-menu__item">Skills</a>
-                    <a href="#" class="top-menu__item">Contacts</a>
+                    <a href="#about" class="top-menu__item">About</a>
+                    <a href="#skills" class="top-menu__item">Skills</a>
+                    <a href="#contacts" class="top-menu__item">Contacts</a>
             </nav>
     </div>
 
-    <div class="container first-slide">
+    <div class="container first-slide" id="about">
         <h1 class="hello">Hi Inlight!</h1>
             <img src="http://s3.amazonaws.com/mhka_ensembles_production/assets/public/000/019/869/medium_500/icon_person.jpg?1386611400"
                 alt="" class="about__photo">
@@ -36,7 +36,7 @@
                 magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                 consequat.
     </div>
-    <div class="container second-slide">
+    <div class="container second-slide" id="skills">
         <div class="coverLetter__wrap">
             <p class="coverLetter__text">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, rerum possimus asperiores officia blanditiis unde minima
@@ -47,7 +47,7 @@
             </p>
         </div>
     </div>
-    <div class="container third-slide">
+    <div class="container third-slide" id="contacts">
         <div class="skills__wrap">
             <p class="skills__text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis neque eveniet expedita nemo alias magnam.
@@ -64,10 +64,16 @@
 
     <script>
 
-        $(function () {   // New syntax! same as $(document).ready(function(){...}) This is to prevent any jQuery code from running before the document is finished loading (is ready).
-            $(".about__wrap").click(function () {
-                $(".about__photo").toggle();
-            });
+        // $(function () {   // New syntax! same as $(document).ready(function(){...}) This is to prevent any jQuery code from running before the document is finished loading (is ready).
+        //     $(".about__wrap").click(function () {
+        //         $(".about__photo").toggle();
+        //     });
+        // });
+        $("document").on("click", "a[href^='#']", function(event){
+          event.preventDefault();
+          $(html, body).animate({
+              scrollTop: $($.attr(this, "href")).offset().top
+          },2000)  
         });
 
     </script>
