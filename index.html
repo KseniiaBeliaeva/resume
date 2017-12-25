@@ -8,41 +8,69 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
-        crossorigin="anonymous"> <!--Bootstrap css-->
+        crossorigin="anonymous">
+    <!--Bootstrap css-->
     <link rel="stylesheet" type="text/css" href="resume.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--jQuery-->
 </head>
-<body>
-<div class="container">
-    <h1>Hi Inlight!</h1>
-    <div class="about__wrap">
-        <img src="https://media.giphy.com/media/p4NLw3I4U0idi/giphy.gif" alt="" class="about__photo">
-        <p class="about__intro"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-     </div>
-    <div class="coverLetter__wrap">
-            <p class="coverLetter__text">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, rerum possimus asperiores officia blanditiis
-                unde minima magni perspiciatis eaque ab mollitia reiciendis hic facere! Asperiores nobis consequatur reiciendis
-                 alias illum id similique dolorum, deleniti nemo, animi ipsa, ut tenetur delectus corrupti! Dolorem quia nam,
-                  obcaecati, aliquam iure praesentium in, accusantium debitis itaque id sed velit optio odit aperiam ducimus
-                   suscipit illo inventore nisi recusandae cumque tenetur impedit.
-            </p>
-            </div>
-            <div class="skills__wrap">
-                <p class="skills__text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis neque eveniet expedita nemo alias magnam.
-                    <ul>
-                        <li>Lorem, ipsum dolor.</li>
-                        <li>Ipsum, rerum ipsam.</li>
-                        <li>Inventore, minima ducimus.</li>
-                        <li>Dolore, voluptates velit?</li>
-                        <li>Corrupti, reiciendis veritatis.</li>
-                    </ul>
-                </p>
-            </div>
-</div>
 
+<body>
+
+    <div class="top-menu__container">
+        <div class="menu-logo">
+            <p class="my-name">Kseniia Beliaeva, Junior Front End Developer</p>
+        </div>
+            <nav class="top-menu__nav">
+                    <a href="#" class="top-menu__item">About</a>
+                    <a href="#" class="top-menu__item">Skills</a>
+                    <a href="#" class="top-menu__item">Contacts</a>
+            </nav>
+    </div>
+
+    <div class="container first-slide">
+        <h1 class="hello">Hi Inlight!</h1>
+            <img src="http://s3.amazonaws.com/mhka_ensembles_production/assets/public/000/019/869/medium_500/icon_person.jpg?1386611400"
+                alt="" class="about__photo">
+            <p class="about__intro"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+    </div>
+    <div class="container second-slide">
+        <div class="coverLetter__wrap">
+            <p class="coverLetter__text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, rerum possimus asperiores officia blanditiis unde minima
+                magni perspiciatis eaque ab mollitia reiciendis hic facere! Asperiores nobis consequatur reiciendis alias
+                illum id similique dolorum, deleniti nemo, animi ipsa, ut tenetur delectus corrupti! Dolorem quia nam, obcaecati,
+                aliquam iure praesentium in, accusantium debitis itaque id sed velit optio odit aperiam ducimus suscipit
+                illo inventore nisi recusandae cumque tenetur impedit.
+            </p>
+        </div>
+    </div>
+    <div class="container third-slide">
+        <div class="skills__wrap">
+            <p class="skills__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis neque eveniet expedita nemo alias magnam.
+                <ul>
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Ipsum, rerum ipsam.</li>
+                    <li>Inventore, minima ducimus.</li>
+                    <li>Dolore, voluptates velit?</li>
+                    <li>Corrupti, reiciendis veritatis.</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+
+    <script>
+
+        $(function () {   // New syntax! same as $(document).ready(function(){...}) This is to prevent any jQuery code from running before the document is finished loading (is ready).
+            $(".about__wrap").click(function () {
+                $(".about__photo").toggle();
+            });
+        });
+
+    </script>
 </body>
 
 </html>
-

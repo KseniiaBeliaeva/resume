@@ -1,5 +1,34 @@
+body,html {
+    height: 100%;
+}
+
+/* to create the actual parallax effect for the wrapper*/
+.container {
+    background-attachment: fixed;
+     /* Set a specific height */
+    height: 100%; 
+    padding: 15px;
+
+     /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}  
+/**/
+.first-slide {
+    /*background-image: url("./images/parallax.jpg");*/
+    background-color: #fff;
+}
+.second-slide {
+    background-image: url("./images/parallax2.jpg");
+}
+.third-slide {
+    background-image: url("./images/parallax3.jpg");
+}
 .about__photo {
-    width: 50%;
+    width: 200px;
+    height: 200px;
     float: left;
 }
 .about__intro {
@@ -9,4 +38,23 @@
 
 .coverLetter__wrap {
     clear: both;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+.container {
+       background-attachment: scroll;
+}
+html, body {
+  margin: 5px;
+}
+.top-menu__nav {
+    display: flex;
+    justify-content: flex-end;
+}
+.top-menu__item {
+    flex-grow: 0.1;
+}
+.about__photo {
+    margin: 0 auto;
+}
 }
