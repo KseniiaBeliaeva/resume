@@ -29,16 +29,16 @@
     </div>
 
     <div class="container first-slide" id="about">
-        <h1 class="hello">Hi Inlight!</h1>
+        <h1 class="fs-header">Hi Inlight!</h1>
             <img src="http://s3.amazonaws.com/mhka_ensembles_production/assets/public/000/019/869/medium_500/icon_person.jpg?1386611400"
-                alt="" class="about__photo">
-            <p class="about__intro"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                alt="" class="fs-about__photo">
+            <p class="fs-about__intro"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
                 magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                 consequat.
     </div>
     <div class="container second-slide" id="skills">
-        <div class="coverLetter__wrap">
-            <p class="coverLetter__text">
+        <div class="ss-coverLetter__wrap">
+            <p class="ss-coverLetter__text">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, rerum possimus asperiores officia blanditiis unde minima
                 magni perspiciatis eaque ab mollitia reiciendis hic facere! Asperiores nobis consequatur reiciendis alias
                 illum id similique dolorum, deleniti nemo, animi ipsa, ut tenetur delectus corrupti! Dolorem quia nam, obcaecati,
@@ -48,32 +48,27 @@
         </div>
     </div>
     <div class="container third-slide" id="contacts">
-        <div class="skills__wrap">
-            <p class="skills__text">
+        <div class="ts-skills__wrap">
+            <p class="ts-skills__text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis neque eveniet expedita nemo alias magnam.
-                <ul>
-                    <li>Lorem, ipsum dolor.</li>
-                    <li>Ipsum, rerum ipsam.</li>
-                    <li>Inventore, minima ducimus.</li>
-                    <li>Dolore, voluptates velit?</li>
-                    <li>Corrupti, reiciendis veritatis.</li>
+                <ul class="ts-skills__list">
+                    <li class="ts-skills__list-item">Lorem, ipsum dolor.</li>
+                    <li class="ts-skills__list-item"></li>Ipsum, rerum ipsam.</li>
+                    <li class="ts-skills__list-item">Inventore, minima ducimus.</li>
+                    <li class="ts-skills__list-item">Dolore, voluptates velit?</li>
+                    <li class="ts-skills__list-item">Corrupti, reiciendis veritatis.</li>
                 </ul>
             </p>
         </div>
     </div>
 
     <script>
-
-        // $(function () {   // New syntax! same as $(document).ready(function(){...}) This is to prevent any jQuery code from running before the document is finished loading (is ready).
-        //     $(".about__wrap").click(function () {
-        //         $(".about__photo").toggle();
-        //     });
-        // });
-        $("document").on("click", "a[href^='#']", function(event){
+        $("nav a").on("click", function(event){
           event.preventDefault();
-          $(html, body).animate({
-              scrollTop: $($.attr(this, "href")).offset().top
-          },2000)  
+        
+          $('html, body').animate({
+            scrollTop: $(this.hash).offset().top
+          }, 800) ; 
         });
 
     </script>
