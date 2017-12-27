@@ -13,6 +13,8 @@
     <link rel="stylesheet" type="text/css" href="resume.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!--jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"></script>
+    <scr src="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css"></scr>
 </head>
 
 <body>
@@ -26,6 +28,11 @@
                     <a href="#skills" class="top-menu__item">Skills</a>
                     <a href="#contacts" class="top-menu__item">Contacts</a>
             </nav>
+            <div class="top-menu__humburger">
+             <span></span>
+             <span></span>
+             <span></span>
+            </div>
     </div>
 
     <div class="container first-slide" id="about">
@@ -70,7 +77,14 @@
             scrollTop: $(this.hash).offset().top
           }, 800) ; 
         });
-
+    </script>
+    <script>
+    $(document).ready(function(){
+     $(".top-menu__humburger").click(function(){
+      $(this).toggleClass("close");
+      $(this).toggleClass("open");
+     });
+    });
     </script>
 </body>
 

@@ -1,5 +1,6 @@
 body,html {
     height: 100%;
+    padding: 10px;
 }
 
 /* to create the actual parallax effect for the wrapper*/
@@ -8,17 +9,18 @@ body,html {
      /* Set a specific height */
     height: 100%; 
     padding: 15px;
-
      /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    color: white;
 }  
 /**/
 .first-slide {
-    /*background-image: url("./images/parallax.jpg");*/
     background-color: #fff;
+    color:#000;
+    padding: 0;
 }
 .second-slide {
     background-image: url("./images/parallax2.jpg");
@@ -39,22 +41,52 @@ body,html {
 .coverLetter__wrap {
     clear: both;
 }
+.top-menu__humburger{
+    display:none;
+}
+.top-menu__humburger span {
+    width: 40px;
+    display: block;
+    height: 5px;
+    margin: 5px;
+    background-color:lightpink;
+    border-radius: 2px;
+
+}
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
 .container {
        background-attachment: scroll;
 }
-html, body {
-  margin: 5px;
+.top-menu__container {
+    display: flex;
+    align-items: center;
 }
 .top-menu__nav {
-    display: flex;
-    justify-content: flex-end;
+  display: none;
 }
-.top-menu__item {
-    flex-grow: 0.1;
+.top-menu__humburger {
+    display: block;
+
+}
+.top-menu__humburger.close span:nth-child(2) {
+    opacity: 0;
+}
+.top-menu__humburger.open span:nth-child(1){
+   transform: translateY(8px) rotate(45deg);
+   transition: all .35s ease-in-out;
+}
+
+.top-menu__humburger.open span:nth-child(3){
+   transform: translateY(-13px) rotate(-45deg);
+   transition: all .35s ease-in-out;
 }
 .about__photo {
     margin: 0 auto;
 }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 680px) {
+ 
+
 }
