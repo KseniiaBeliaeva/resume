@@ -67,19 +67,21 @@ body,html {
 }
 .top-menu__humburger {
     display: block;
-
 }
-.top-menu__humburger.close span:nth-child(2) {
+.top-menu__humburger span {
+transition: all .35s ease-in-out;
+}
+
+.top-menu__humburger.open span:nth-child(2) {
     opacity: 0;
 }
 .top-menu__humburger.open span:nth-child(1){
-   transform: translateY(8px) rotate(45deg);
-   transition: all .35s ease-in-out;
+   transform: translateY(10px) rotate(45deg); /*10px takes from margin:5px and height:5px*/
+   
 }
 
 .top-menu__humburger.open span:nth-child(3){
-   transform: translateY(-13px) rotate(-45deg);
-   transition: all .35s ease-in-out;
+   transform: translateY(-10px) rotate(-45deg);
 }
 .about__photo {
     margin: 0 auto;
