@@ -51,22 +51,20 @@ body,html {
     margin: 5px;
     background-color:lightpink;
     border-radius: 2px;
-
 }
+
+
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
 .container {
        background-attachment: scroll;
-}
-.top-menu__container {
-    display: flex;
-    align-items: center;
 }
 .top-menu__nav {
   display: none;
 }
 .top-menu__humburger {
     display: block;
+    float: right;
 }
 .top-menu__humburger span {
 transition: all .35s ease-in-out;
@@ -77,14 +75,24 @@ transition: all .35s ease-in-out;
 }
 .top-menu__humburger.open span:nth-child(1){
    transform: translateY(10px) rotate(45deg); /*10px takes from margin:5px and height:5px*/
-   
+   background-color: #ff9dac;
 }
 
 .top-menu__humburger.open span:nth-child(3){
    transform: translateY(-10px) rotate(-45deg);
+   background-color: #ff9dac;
 }
 .about__photo {
     margin: 0 auto;
+}
+.top-menu__nav.toggleMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.top-menu__nav.toggleMenu a {
+padding: 2px;
+
 }
 }
 

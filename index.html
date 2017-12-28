@@ -20,28 +20,31 @@
 <body>
 
     <div class="top-menu__container">
-        <div class="menu-logo">
-            <p class="my-name">Kseniia Beliaeva, Junior Front End Developer</p>
+        <div class="ccc">
+        <div class="top-menu__humburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-            <nav class="top-menu__nav">
-                    <a href="#about" class="top-menu__item">About</a>
-                    <a href="#skills" class="top-menu__item">Skills</a>
-                    <a href="#contacts" class="top-menu__item">Contacts</a>
-            </nav>
-            <div class="top-menu__humburger">
-             <span></span>
-             <span></span>
-             <span></span>
+            <div class="menu-logo">
+                Kseniia Beliaeva, Junior Front End Developer
             </div>
+           
+        </div>
+        <nav class="top-menu__nav">
+            <a href="#about" class="top-menu__item">About</a>
+            <a href="#skills" class="top-menu__item">Skills</a>
+            <a href="#contacts" class="top-menu__item">Contacts</a>
+        </nav>
+
     </div>
 
     <div class="container first-slide" id="about">
         <h1 class="fs-header">Hi Inlight!</h1>
-            <img src="http://s3.amazonaws.com/mhka_ensembles_production/assets/public/000/019/869/medium_500/icon_person.jpg?1386611400"
-                alt="" class="fs-about__photo">
-            <p class="fs-about__intro"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.
+        <img src="http://s3.amazonaws.com/mhka_ensembles_production/assets/public/000/019/869/medium_500/icon_person.jpg?1386611400"
+            alt="" class="fs-about__photo">
+        <p class="fs-about__intro"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     </div>
     <div class="container second-slide" id="skills">
         <div class="ss-coverLetter__wrap">
@@ -70,20 +73,21 @@
     </div>
 
     <script>
-        $("nav a").on("click", function(event){
-          event.preventDefault();
-        
-          $('html, body').animate({
-            scrollTop: $(this.hash).offset().top
-          }, 800) ; 
+        $("nav a").on("click", function (event) {
+            event.preventDefault();
+
+            $('html, body').animate({
+                scrollTop: $(this.hash).offset().top
+            }, 800);
         });
     </script>
     <script>
-    $(document).ready(function(){
-     $(".top-menu__humburger").click(function(){
-      $(this).toggleClass("open");
-     });
-    });
+        $(document).ready(function () {
+            $(".top-menu__humburger").click(function () {
+                $(this).toggleClass("open");
+                $(".top-menu__nav").toggleClass("toggleMenu");
+            });
+        });
     </script>
 </body>
 
