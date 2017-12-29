@@ -2,7 +2,9 @@ body,html {
     height: 100%;
     padding: 10px;
 }
-
+.menu-logo {
+    color: #34091C;
+}
 /* to create the actual parallax effect for the wrapper*/
 .container {
     background-attachment: fixed;
@@ -75,12 +77,13 @@ transition: all .35s ease-in-out;
 }
 .top-menu__humburger.open span:nth-child(1){
    transform: translateY(10px) rotate(45deg); /*10px takes from margin:5px and height:5px*/
-   background-color: #ff9dac;
+    background-color:lightpink;
 }
 
 .top-menu__humburger.open span:nth-child(3){
    transform: translateY(-10px) rotate(-45deg);
-   background-color: #ff9dac;
+    background-color:lightpink;
+
 }
 .about__photo {
     margin: 0 auto;
@@ -89,10 +92,28 @@ transition: all .35s ease-in-out;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  padding: 15px 0;
+  line-height: 40px;
 }
 .top-menu__nav.toggleMenu a {
 padding: 2px;
+color: #660B32;
+}
+.top-menu__item {
+    transition: transform .3s;
+    transition-timing-function: linear;
+}
+.top-menu__item:hover {
+    transform: scale(1.3);
+    color: #660B32;
+    text-decoration: none;
+}
 
+.centered-img {
+    text-align: center;
+}
+.fs-about__photo {
+    border-radius: 4%;
 }
 }
 
